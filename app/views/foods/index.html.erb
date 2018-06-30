@@ -1,0 +1,61 @@
+<head>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+
+  <title>ㅅㅁㅌ</title>
+
+  <!--Css / Bootstrap Css-->
+  <link rel="stylesheets" href="./food.scss" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <!--font-->
+</head>
+
+<!-- 상단 바 -->
+    <nav>
+        <ul id="nav_main">
+            <li id="menu0"><span></span>ㅅㅁㅌ</li>
+            <li id="menu1">
+                <a href="#Home">Home</a>
+            </li>
+            <li id="menu2">
+                <a href="Search">Search</a></a>
+            </li>
+             <li id="menu3">
+                <a href="/users/sign_in">log in</a>
+            </li>
+        </ul>
+    </nav>
+
+<body class="whole">
+<div class= "Home">
+    <p class="subheading">ㅅㅁㅌ<br>
+    <span class="likelion">멋쟁이 사자처럼</span></p><br>
+    <p id= "heading">ㅅㅁㅌ at 신촌톤</p><br>
+    <div class="introduction">
+        <p class="intro"> </p>
+         <span class="shinchon_ㅅㅁㅌ">"ㅅㅁㅌ"</span>
+         은
+         <br>
+          <span class="alone_living">자취족</span>들을 위한
+         <br>
+         야식 레시피 추천 서비스를 제공합니다.
+         <%=@info2%>
+         <br>
+    </div>
+    
+<section id="main">
+<h1 style="text-align: center">ㅅㅁㅌ</h1>
+<h3 style="text-align: center">레시피 포함할 식재료를 넣어주세요!</h3>
+
+<%= form_tag search_foods_path, :method => :get do %>
+주재료 : <%= text_field_tag :query1, params[:query1] %> <br>
+부재료 : <%= text_field_tag :query2, params[:query2] %> <%=submit_tag "검색" %>
+
+<% end %>
+
+<br>
+
+<%= link_to 'New Food', new_food_path %>
+</section>
+</div>
+</body>
