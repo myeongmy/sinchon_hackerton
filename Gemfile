@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'rails_db'
+gem 'carrierwave', '~> 1.0'
 gem 'rest-client'
 gem 'nokogiri'
 gem 'devise'

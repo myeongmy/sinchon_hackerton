@@ -10,6 +10,12 @@ Rails.application.routes.draw do
   
   get 'foods/search' => 'foods#search'
   
+  post '/foods/:food_id/users/:user_id' => 'foods#save_m1'
+  
+  get '/mypage' => 'foods#mypage'
+  
+  get '/crawling/crawl'  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

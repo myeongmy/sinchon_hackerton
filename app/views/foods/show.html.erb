@@ -15,5 +15,10 @@
   <%= @food.material2 %>
 </p>
 
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @food.image.url%>
+</p>
+
 <%= link_to 'Edit', edit_food_path(@food) %> |
 <%= link_to 'Back', foods_path %>

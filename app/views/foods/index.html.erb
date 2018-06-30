@@ -11,9 +11,43 @@
 </head>
 
 <!-- 상단 바 -->
-    <nav>
+  <!--%if user_signed_in?%-->
+<nav>
+    <div class="nav_main_first">
         <ul id="nav_main">
-            <li id="menu0"><span></span>ㅅㅁㅌ</li>
+            <li id="menu0">ㅅㅁㅌ
+            </li>
+        </ul>
+    </div>
+    <%if user_signed_in?%>
+    <div class="nav_main_second">        
+        <ul id="nav_main">
+            <li id="menu-1">
+            </li>
+            <li id="menu1">
+                <a href="#Home">Home</a>
+            </li>
+            <li id="menu2">
+                <a href="Search">Search</a></a>
+            </li>
+            <li id="menu4">
+                <a href="Mypage">Mypage</a></a>
+            </li>
+             <li id="menu3">
+               <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+            </li>
+            <li id="menu+1">
+            </li>
+        </ul>
+    </div>
+    <%else %>
+    
+        <!--<ul id="nav_main">
+            <li id="menu0"><span></span>ㅅㅁㅌ</li>-->
+            <div class="nav_main_second">
+            <ul id="nav_main">
+            <li id="menu-1">
+            </li>
             <li id="menu1">
                 <a href="#Home">Home</a>
             </li>
@@ -23,18 +57,21 @@
              <li id="menu3">
                 <a href="/users/sign_in">log in</a>
             </li>
+            <li id="menu+1">
+            </li>
         </ul>
-    </nav>
-
+    </div>    
+    
+   <% end%>
+</nav>
 <body class="whole">
 <div class= "Home">
-    <p class="subheading">ㅅㅁㅌ<br>
-    <span class="likelion">멋쟁이 사자처럼</span></p><br>
+    <br><br>
+    <p class="subheading">ㅅㅁㅌ X <span class="likelion">멋쟁이 사자처럼</span></p><br>
     <p id= "heading">ㅅㅁㅌ at 신촌톤</p><br>
     <div class="introduction">
         <p class="intro"> </p>
-         <span class="shinchon_ㅅㅁㅌ">"ㅅㅁㅌ"</span>
-         은
+         <span class="shinchon_ㅅㅁㅌ">"ㅅㅁㅌ"</span>은
          <br>
           <span class="alone_living">자취족</span>들을 위한
          <br>
@@ -42,7 +79,8 @@
          <%=@info2%>
          <br>
     </div>
-    
+</div>
+
 <section id="main">
 <h1 style="text-align: center">ㅅㅁㅌ</h1>
 <h3 style="text-align: center">레시피 포함할 식재료를 넣어주세요!</h3>
@@ -55,7 +93,21 @@
 
 <br>
 
+
+
+
+게시물  : 
+      @first=@i[0]
+      <%=Food.find(@food_user_count[@first]).fname%> <br>
+      <%=Food.find(@food_user_count[@first]).image%>
+
+
+
+
+
+
 <%= link_to 'New Food', new_food_path %>
+
 </section>
 </div>
 </body>
