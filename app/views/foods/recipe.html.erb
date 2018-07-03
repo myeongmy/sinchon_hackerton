@@ -1,0 +1,15 @@
+<div class="Recipe">
+
+<h1 style="text-align: center; font-family: 'HSBombaram', sans-serif; font-size: 90px;">ㅅㅁㅌ</h1>
+<h3 style="text-align: center; font-size: 30px;">레시피 포함할 <span style="color: #EEA110;">식재료</span>를 넣어주세요!</h3>
+<br>
+<br>
+<div class="Recipe2">
+<%= form_tag search_foods_path, :method => :get do %>
+주재료 : <%= text_field_tag :query1, params[:query1] %> <br><br>
+부재료 : <%= text_field_tag :query2, params[:query2] %> <%=submit_tag "검색" %>
+</div>
+<% end %>
+</div>
+
+<a href='/'>메인으로</a><br>

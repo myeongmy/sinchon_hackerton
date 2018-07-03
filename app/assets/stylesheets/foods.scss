@@ -1,3 +1,7 @@
+body {
+    background-color: black;
+}
+
 .whole{
     background-color: black;
 }
@@ -22,9 +26,21 @@ nav{
 .nav_main_first{
     list-style-type: none;
     height: 30px;
-    position: center;
+    position: right;
     margin: 0px;
     display: flex;
+}
+
+#menu1{
+    font-size: 15px;
+}
+
+#menu2{
+    font-size: 15px;
+}
+
+#menu1{
+    font-size: 15px;
 }
 
 #nav_main {
@@ -38,20 +54,21 @@ nav{
 }
 
 #menu0 {
-    color: #59B65A;
+    font-family: 'HSBombaram', sans-serif;
+    color: #59B65A; /*green*/
     font-weight: bold;
-    font-size: 50px;
+    font-size: 70px;
 }
 
 .Home{
     font-family: 'Nanum Gothic', sans-serif;
-    text-align: left;
-    margin: 10px 0px 20px 0px;
+    text-align: right;
+    margin: 10px 300px 40px 20px;
     width: 100%; height:700px;
-    padding: 70px 0px 70px 50px;
-    background-image:url("b1.jpg");
+    padding: 10px 120px 20px 0px;
+    background-image:url("b8.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 70% 100%;
     background-position: left center;
     font-size: 30px;
     color: #ffffff;
@@ -69,7 +86,7 @@ nav{
 }
 
 .likelion{
-    color: #EEA110;
+    color: #EEA110; /*orange*/
     font-size: 25px;
 }
 
@@ -78,11 +95,14 @@ nav{
 }
 
 .subheading{
+    font-family: 'BMJUA', normal;
     font-size: 25px;
 }
 
 #heading {
+    font-family: 'BMJUA', normal;
     font-size: 60px;
+    color: #eff951; /*yellow*/
 }
 
 .Home.subheading{
@@ -91,28 +111,47 @@ nav{
 }
 
 .shinchon_ㅅㅁㅌ{
+    font-family: 'HSBombaram', sans-serif;
     font-weight: bold;
-    font-size: 23px;
+    font-size: 45px;
     color: #59B65A;
 }
 
+#log_in_please{
+    background-color: black;
+}
+
 .log_in_wrapper{
-     font-family: 'Nanum Gothic', sans-serif;
-     background-color: #F58356; /* orange*/
+     font-family: 'Nanum Gothic', 'sans-serif';
+     background-color: black; /*black*/
      border: none;
      color: white;
      padding: 15px 32px;
-     text-align: left;
+     text-align: center;
      text-decoration: none;
      font-size: 16px;
+     width: 100%; height: 100%;
+     padding: 10px 120px 20px 0px;
+     background-image:url("b8.jpg");
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+     background-position: left center;
+    color: #ffffff;
+     
 }
 
-#log_in_main{
-    font-family: 'Nanum Gothic', sans-serif;
+#log_in_page{
+    font-family: 'Nanum Gothic', 'sans-serif';
+    background-color: black; /*black*/
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    width: 50px; height: 300px;
 }
+
 
 footer{
-    background-color: #B0B3CC;
+    background-color: black;
     margin: 0px;
     padding: 0;
     width: 100%; height: 300;
@@ -132,4 +171,50 @@ footer{
 
 li{
     list-style-type: none;
+}
+
+.Recipe{
+    color: #59B65A;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    background-image:url("food.jpg");
+    width: 100%; height:700px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: left center;
+    padding-top: 60px;
+}
+
+.Recipe2{
+    padding :0% 40%;
+    color: white;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #EEA110;
+}
+.ranking{
+    padding :100px 30%;
+    background-image:url("rank.jpg");
+    width: 95%; height:130px;
+    
+    background-repeat: no-repeat;
+    background-size: 65% 100%;
+    background-position: left center;
+    color: #ffffff;
+    
+}
+
+.ranking2{
+    padding :0% 30%;
+}
+.gcontent{
+    padding :0% 30px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+.kk{
+    padding-left: 40%;
 }

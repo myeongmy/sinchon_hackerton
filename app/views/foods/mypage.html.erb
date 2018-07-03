@@ -1,9 +1,21 @@
+
+<h1 style="text-align: center; font-family: 'HSBombaram', sans-serif; font-size: 90px; color: #59B65A;">ㅅㅁㅌ</h1>
+
+
+
+
 <% @foods.each do |onepost| %>
 
-   <%= onepost.fname %>
-   <%= onepost.image %>
+<div class="kk">
+   <%= onepost.fname %> <br>
+   <img src = "<%=onepost.image.url%>" style="width: 200px; height: 200px;" item-align:"center">
    
    <br>---------------------------<br>
     
+    
+</div>    
 <% end %>
 
+
+
+<a href='/'>메인으로</a><br>

@@ -1,0 +1,36 @@
+<div class="ranking">
+
+</div>
+<div class="ranking2">
+<div class= "gheader" style="text-align:center">
+    <h1 style="text-align: center; font-family: 'HSBombaram', sans-serif; font-size: 90px; color: #59B65A;">ㅅㅁㅌ</h1>
+    
+    
+<h1 style="text-align: center; font-family: 'HSBombaram', sans-serif; font-size: 30px; color: white;">득표 레시피 순위</h1>
+
+
+
+</div>
+
+<div class="gcontent" style="text-align:center" >
+    <div class="glist">
+
+     
+     <% @fkeys.each do |t| %>
+        
+        <% if @food_user_count[t] != nil %>
+        <div class="itt" style="text-align: center; font-family: 'BMJUA', normal; font-size: 23px; color: white;"><%=Food.find(t).fname%> <%=@food_user_count[t]%> </div>
+        
+        
+           <br>
+        <% end %>
+     <% end %>
+     
+     
+     </div>
+</div>
+
+<div class="return"  style="text-align:center">
+<a href='/'>메인으로</a><br>
+</div>
+</div>

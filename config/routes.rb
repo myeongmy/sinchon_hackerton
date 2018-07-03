@@ -8,13 +8,19 @@ Rails.application.routes.draw do
   
   root 'foods#index'
   
+  get 'foods/index' => 'foods#index'
+  
   get 'foods/search' => 'foods#search'
+  
+  get '/recipe' => 'foods#recipe'
   
   post '/foods/:food_id/users/:user_id' => 'foods#save_m1'
   
   get '/mypage' => 'foods#mypage'
   
   get '/crawling/crawl'  
+  
+  get '/ranking' => 'foods#ranking'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
