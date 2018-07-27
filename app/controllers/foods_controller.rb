@@ -5,7 +5,7 @@ class FoodsController < ApplicationController
   # GET /foods.json
   
   def search
-    @foods = Food.solr_search do
+    @foods = Food.search do
       keywords params[:query1]
       keywords params[:query2]
     end.results
@@ -196,7 +196,7 @@ class FoodsController < ApplicationController
        if @check.length == 0
          @m1=M1.new
          @m1.food_id=params[:food_id]
-         @m1.user_id=params[:user_id]
+         @m1.user_id=current_user.id
          @m1.save  
        end
          

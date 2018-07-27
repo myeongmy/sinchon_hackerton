@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   
   get 'foods/index' => 'foods#index'
   
-  get 'foods/search' => 'foods#search'
+  get '/Search' => 'foods#recipe'
   
   get '/recipe' => 'foods#recipe'
   
